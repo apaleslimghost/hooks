@@ -1,4 +1,5 @@
-import { Meteor, Tracker } from 'meteor/tracker'
+import { Meteor } from 'meteor/meteor'
+import { Tracker } from 'meteor/tracker'
 import { useEffect, useState } from 'react'
 
 export const useTracker = (trackerFunction, dependencies = []) => {

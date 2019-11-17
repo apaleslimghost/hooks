@@ -1,6 +1,6 @@
 Package.describe({
 	name: 'quarterto:hooks',
-	version: '0.2.0',
+	version: '0.2.1',
 	// Brief, one-line summary of the package.
 	summary: 'react hooks for meteor data',
 	// URL to the Git repository containing the source code for this package.
