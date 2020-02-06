@@ -16,6 +16,6 @@ export const useTracker = (trackerFunction, dependencies = []) => {
 	return trackerData
 }
 
-export const useSubscription = (...args) => useTracker(() => Meteor.subscribe(...args).ready(), [...args])
+export const useSubscription = (subscription, ...args) => useTracker(() => subscription && Meteor.subscribe(subscription, ...args).ready(), [subscription, ...args])
 export const useCursor = (cursor, deps = []) => useTracker(() => cursor && cursor.fetch(), deps)
 export const useFindOne = (collection, query, deps = []) => useTracker(() => collection.findOne(query), deps)
